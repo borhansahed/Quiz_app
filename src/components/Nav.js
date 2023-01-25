@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "../styles/Nav.module.css";
 import Account from "./Account";
 import logo from "./assest/images/logo.png";
@@ -7,10 +8,10 @@ function Nav() {
     <nav className={classes.nav}>
       <ul>
         <li>
-          <a href="index.html" className={classes.brand}>
+          <Link to="/" className={classes.brand}>
             <img src={logo} alt="Quiz" />
             <h3>Active Quiz</h3>
-          </a>
+          </Link>
         </li>
       </ul>
       <Account />

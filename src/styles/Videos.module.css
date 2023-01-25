@@ -1,4 +1,9 @@
+
+/* .container{
+  display: flex;
+} */
 .videos {
+  
     width: 90%;
     display: grid;
     margin: 3rem auto;

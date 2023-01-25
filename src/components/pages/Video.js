@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "../../styles/Video.module.css";
 
 const Video = () => {
   return (
-    <a href="quiz.html">
+    <Link to="/quiz">
       <div className={classes.video}>
         <img
           src="https://raw.githubusercontent.com/learnwithsumit/react-quiz/main/src/assets/images/3.jpg"
@@ -15,7 +16,7 @@ const Video = () => {
           <p>Score : Not taken yet</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

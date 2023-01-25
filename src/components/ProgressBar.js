@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "../styles/ProgressBar.module.css";
 import Button from "./Button";
 const ProgressBar = () => {
@@ -13,13 +14,15 @@ const ProgressBar = () => {
           <div style={{ width: "20%" }} className={classes.progress}></div>
         </div>
       </div>
-      <Button
-        className={classes.next}
-        //   onClick={progress === 100 ? submit : next}
-      >
-        <span>Next Questions</span>
-        <span className="material-icons-outlined"> arrow_forward </span>
-      </Button>
+      <Link to="/result">
+        <Button
+          className={classes.next}
+          //   onClick={progress === 100 ? submit : next}
+        >
+          <span>Next Questions</span>
+          <span className="material-icons-outlined"> arrow_forward </span>
+        </Button>
+      </Link>
     </div>
   );
 };

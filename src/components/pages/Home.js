@@ -7,11 +7,6 @@ const Home = () => {
       <Videos />
       <Videos />
       <Videos />
-      <Videos />
-      <Videos />
-      <Videos />
-      <Videos />
-      <Videos />
     </div>
   );
 };

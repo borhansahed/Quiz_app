@@ -1,17 +1,19 @@
 import React from "react";
 import Illustration from "../Illustration";
-import SignupForm from "../SignupForm";
+import LoginForm from "../LoginForm";
 
-const Signup = () => {
+const Login = () => {
   return (
     <>
-      <h1>Create an account</h1>
+      <h1>Login to your account</h1>
+
       <div className="column">
         <Illustration />
-        <SignupForm />
+
+        <LoginForm />
       </div>
     </>
   );
 };
 
-export default Signup;
+export default Login;

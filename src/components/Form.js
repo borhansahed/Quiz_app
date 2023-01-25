@@ -1,15 +1,9 @@
 import React from "react";
 import classes from "../styles/Form.module.css";
 
-const Form = ({ children, className, ...rest }) => {
-  console.log(className);
+const Form = ({ style, children, ...rest }) => {
   return (
-    <form
-      style={{ height: "500px" }}
-      action="#"
-      className={`${className} ${classes.form}`}
-      {...rest}
-    >
+    <form style={style} action="#" className={`${classes.form}`} {...rest}>
       {children}
     </form>
   );

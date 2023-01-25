@@ -4,7 +4,8 @@ import Video from "./Video";
 
 const Videos = () => {
   return (
-    <div className={classes.videos}>
+    <div className={`${classes.videos}`}>
+      {/* <h1>{process.env.REACT_APP_NAME}</h1> */}
       <Video />
     </div>
   );
