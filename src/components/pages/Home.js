@@ -5,8 +5,6 @@ const Home = () => {
   return (
     <div>
       <Videos />
-      <Videos />
-      <Videos />
     </div>
   );
 };

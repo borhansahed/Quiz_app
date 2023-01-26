@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
@@ -84,7 +84,7 @@ const SignupForm = () => {
 
       {error && <p className="error">{error}</p>}
       <div className="info">
-        Already have an account? <a href="login.html">Login</a>
+        Already have an account? <Link to="/login">Login </Link>
         instead.
       </div>
     </Form>

@@ -19,14 +19,14 @@ function App() {
             <Route path="/signup" element={<Signup />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route
-              path="/quiz"
+              path="/quiz/:id"
               element={
                 <PrivateRoute>
                   <Quiz />
                 </PrivateRoute>
               }
             ></Route>
-            <Route path="/result" element={<Result />}></Route>
+            <Route path="/result/:id" element={<Result />}></Route>
             <Route path="*" element={<Navigate to={"/signup"} />}></Route>
           </Routes>
         </Layout>
