@@ -17,7 +17,7 @@ const Videos = () => {
           loader="Loading..."
           next={() => setPage(page + 8)}
         >
-          {videos.slice(8).map((video) => (
+          {videos.map((video) => (
             <Link
               to={`/quiz/${video.youtubeID}`}
               key={video.youtubeID + (Math.random(videos.length * 100) % 100)}

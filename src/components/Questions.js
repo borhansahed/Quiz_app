@@ -2,16 +2,16 @@ import React from "react";
 import classes from "../styles/Questions.module.css";
 import Answers from "./Answers";
 
-const Questions = () => {
-  return (
-    <div className={classes.question}>
+const Questions = ({ answers = [] }) => {
+  return answers.map((answer, index) => (
+    <div className={classes.question} key={index}>
       <div className={classes.qtitle}>
         <span className="material-icons-outlined">help_outlined</span>
-        Here goes the question from Learn with Sahed?
+        Here goes the question from Active Quiz?
       </div>
-      <Answers />
+      <Answers input={false} options={answer.options} />
     </div>
-  );
+  ));
 };
 
 export default Questions;
