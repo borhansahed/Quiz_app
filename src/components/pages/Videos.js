@@ -17,14 +17,28 @@ const Videos = () => {
           loader="Loading..."
           next={() => setPage(page + 8)}
         >
-          {videos.map((video) => (
-            <Link
-              to={`/quiz/${video.youtubeID}`}
-              key={video.youtubeID + (Math.random(videos.length * 100) % 100)}
-            >
-              <Video title={video.title} id={video.youtubeID} noq={video.noq} />
-            </Link>
-          ))}
+          {videos.map((video) =>
+            video.noq > 0 ? (
+              <Link
+                to={`/quiz/${video.youtubeID}`}
+                state={video.title}
+                key={video.youtubeID + (Math.random(videos.length * 100) % 100)}
+              >
+                <Video
+                  title={video.title}
+                  id={video.youtubeID}
+                  noq={video.noq}
+                />
+              </Link>
+            ) : (
+              <Video
+                title={video.title}
+                id={video.youtubeID}
+                noq={video.noq}
+                key={video.youtubeID + (Math.random(videos.length * 100) % 100)}
+              />
+            )
+          )}
         </InfiniteScroll>
       )}
 

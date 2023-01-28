@@ -2,7 +2,7 @@
 import { getDatabase, ref, set } from "firebase/database";
 import _ from "lodash";
 import React, { useEffect, useReducer, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import useQuestions from "../../hooks/useQuestions";
 import Answers from "../Answers";
@@ -40,6 +40,9 @@ const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [qna, dispatch] = useReducer(reducer, initialState);
   const navigate = useNavigate();
+  const location = useLocation();
+  const data = location.state;
+  console.log(data);
 
   useEffect(() => {
     dispatch({
@@ -113,7 +116,7 @@ const Quiz = () => {
             progress={percentage}
             submit={submit}
           />
-          <MiniPlayer />
+          <MiniPlayer id={id} title={data} />
         </>
       )}
     </>
